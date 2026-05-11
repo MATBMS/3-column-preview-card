@@ -1,0 +1,35 @@
+/* ──────────────────────────────────────────
+   Button
+   Filled pill CTA. The text color is supplied
+   by the parent context via --button-fg so the
+   same button works inside any card variant.
+   On hover / keyboard focus, the fill drops to
+   transparent and a white outline takes over.
+
+   The default state declares a transparent 2px
+   border so the total size matches the hover
+   state exactly — no 4px width jump on hover.
+   ────────────────────────────────────────── */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: var(--spacing-100) var(--spacing-400);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: var(--color-gray-100);
+  color: var(--button-fg);
+  font-size: var(--font-size-body);
+  line-height: 1.65;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}

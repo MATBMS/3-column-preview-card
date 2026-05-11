@@ -1,0 +1,28 @@
+/* ──────────────────────────────────────────
+   Typography
+   Loads the page fonts from local files and applies
+   the body default from the style guide.
+   ────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../fonts/lexend-deca/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  src: url("../../fonts/big-shoulders/BigShoulders_36pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-transparent-white-75);
+}
