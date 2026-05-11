@@ -9,7 +9,7 @@
   padding: var(--spacing-600);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-500);
+  gap: var(--spacing-400);
 }
 
 .card--sedans {
@@ -28,14 +28,16 @@
 }
 
 .card__icon {
+  align-self: flex-start;
   height: 40px;
   width: auto;
 }
 
 .card__body {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-1000);
+  gap: var(--spacing-300);
 }
 
 .card__heading {
@@ -49,6 +51,7 @@
   font-weight: var(--font-weight-bold);
   font-size: 40px;
   line-height: 1.2;
+  text-transform: uppercase;
   color: var(--color-gray-100);
 }
 
@@ -57,5 +60,27 @@
 }
 
 .card__button {
+  margin-top: auto;
   align-self: flex-start;
+}
+
+/* Tablet: wider container means more breathing room inside each stacked card.
+   Only applies between the tablet and desktop breakpoints. */
+@media (min-width: 600px) and (max-width: 919px) {
+  .card {
+    padding-inline: var(--spacing-1000);
+  }
+}
+
+/* Desktop: cards share the row evenly, the icon ↔ body gap widens, and
+   the gap between heading and button jumps to 80px per the design. */
+@media (min-width: 920px) {
+  .card {
+    flex: 1;
+    gap: var(--spacing-500);
+  }
+
+  .card__body {
+    gap: var(--spacing-1000);
+  }
 }

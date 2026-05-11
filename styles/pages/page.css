@@ -1,0 +1,39 @@
+/* ──────────────────────────────────────────
+   Page Layout
+   Centers the cards in the viewport and
+   switches the cards container from a vertical
+   stack on mobile to a horizontal row on
+   desktop. The container clips its children so
+   the outer corners stay rounded regardless of
+   layout direction.
+   ────────────────────────────────────────── */
+
+body {
+  min-height: 100svh;
+  background: var(--color-gray-100);
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-1000) var(--spacing-300);
+}
+
+.cards {
+  width: 100%;
+  max-width: 327px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    max-width: 608px;
+  }
+}
+
+@media (min-width: 920px) {
+  .cards {
+    max-width: 920px;
+    flex-direction: row;
+  }
+}
