@@ -1,0 +1,19 @@
+/* ──────────────────────────────────────────
+   Utilities
+   ────────────────────────────────────────── */
+
+/* Visually hide an element while keeping it
+   readable to assistive tech. Used for headings
+   that anchor the document outline but aren't
+   in the visual design. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

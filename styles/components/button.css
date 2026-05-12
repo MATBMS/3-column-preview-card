@@ -27,9 +27,18 @@
   cursor: pointer;
 }
 
-.button:hover,
 .button:focus-visible {
   background: transparent;
   border-color: var(--color-white);
   color: var(--color-white);
+}
+
+/* Only enable the hover effect on devices with a real pointing device.
+   On touch screens, a tap can register as hover and leave the effect stuck. */
+@media (hover: hover) {
+  .button:hover {
+    background: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
 }
