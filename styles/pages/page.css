@@ -37,3 +37,25 @@ body {
     flex-direction: row;
   }
 }
+
+/* Desktop only: the cards group "lights up" with a shadow in the hovered
+   card's signature color. :has() lets the parent react to a child being
+   hovered; transitioning box-shadow on .cards interpolates the color when
+   moving between cards, avoiding a no-shadow flash. */
+@media (min-width: 1440px) {
+  .cards {
+    transition: box-shadow 200ms ease-out;
+  }
+
+  .cards:has(.card--sedans:hover) {
+    box-shadow: 0 24px 48px -8px var(--color-gold-500);
+  }
+
+  .cards:has(.card--suvs:hover) {
+    box-shadow: 0 24px 48px -8px var(--color-cyan-800);
+  }
+
+  .cards:has(.card--luxury:hover) {
+    box-shadow: 0 24px 48px -8px var(--color-green-950);
+  }
+}
